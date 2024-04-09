@@ -1,5 +1,4 @@
-
-import { FerramentasDaListagem } from '../../shared/components/ferramentas-da-listagem/FerramentasDaListagem';
+import { FerramentasDeDetalhe } from '../../shared/components/ferramentas-de-detalhe/FerramentasDeDetalhe';
 import { LayoutBaseDePagina } from '../../shared/layouts';
 
 
@@ -9,10 +8,7 @@ export const Dashboard = () => {
         <LayoutBaseDePagina
             titulo='Página inicial'
             barraDeFerramentas={(
-                <FerramentasDaListagem
-                    mostrarInputBusca
-                    textoBotaoNovo='Nova'
-                />
+                <FerramentasDeDetalhe />
             )}
         >
             Testando
