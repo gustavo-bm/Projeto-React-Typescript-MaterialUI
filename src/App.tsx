@@ -1,22 +1,22 @@
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter } from 'react-router-dom';
 
-import { AppRoutes } from './routes'
-import { AppThemeProvider } from "./shared/contexts/ThemeContext";
-import { MenuLateral } from "./shared/components/menu-lateral/MenuLateral";
-import { DrawerProvider } from "./shared/contexts/DrawerContext";
+import { AppRoutes } from './routes';
+import { AppThemeProvider } from './shared/contexts/ThemeContext';
+import { MenuLateral } from './shared/components/menu-lateral/MenuLateral';
+import { DrawerProvider } from './shared/contexts/DrawerContext';
 
 export const App = () => {
-  return (
-    <AppThemeProvider>
-      <DrawerProvider>
-        <BrowserRouter>
+    return (
+        <AppThemeProvider>
+            <DrawerProvider>
+                <BrowserRouter>
 
-          <MenuLateral>
-            <AppRoutes />
-          </MenuLateral>
+                    <MenuLateral>
+                        <AppRoutes />
+                    </MenuLateral>
 
-        </BrowserRouter>
-      </DrawerProvider>
-    </AppThemeProvider>
-  );
-}
+                </BrowserRouter>
+            </DrawerProvider>
+        </AppThemeProvider>
+    );
+};

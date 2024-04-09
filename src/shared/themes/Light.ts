@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material'
+import { createTheme } from '@mui/material';
 import { yellow, cyan } from '@mui/material/colors';
 // control + space abre as possibilidades
 // função que vem do material ui
