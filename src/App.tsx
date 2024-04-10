@@ -1,9 +1,10 @@
 import { BrowserRouter } from 'react-router-dom';
 
+import './shared/forms/TraducoesYup';
+
+import { AppThemeProvider, DrawerProvider } from './shared/contexts';
+import { MenuLateral } from './shared/components';
 import { AppRoutes } from './routes';
-import { AppThemeProvider } from './shared/contexts/ThemeContext';
-import { MenuLateral } from './shared/components/menu-lateral/MenuLateral';
-import { DrawerProvider } from './shared/contexts/DrawerContext';
 
 export const App = () => {
     return (
