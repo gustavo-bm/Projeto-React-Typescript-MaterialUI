@@ -1,12 +1,14 @@
-import { Button } from '@mui/material';
+import { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { useDrawerContext } from '../shared/contexts';
-import { useEffect } from 'react';
-import { Dashboard } from '../pages';
+import {
+    Dashboard,
+    ListagemDeCidade,
+} from '../pages';
 
 export const AppRoutes = () => {
-    const { toggleDrawerOpen, setDrawerOptions } = useDrawerContext();
+    const { setDrawerOptions } = useDrawerContext();
 
     useEffect(() => {
         setDrawerOptions([
@@ -16,18 +18,20 @@ export const AppRoutes = () => {
                 label: 'Página inicial',
             },
             {
-                // opção teste
-                icon: 'star',
-                path: '/star',
-                label: 'Estrela',
-            }
+                icon: 'location_city',
+                path: '/cidades',
+                label: 'Cidades',
+            },
         ]);
     }, []);
 
     return (
         <Routes>
             <Route path="/pagina-inicial" element={<Dashboard />} />
-            <Route path="/star" element={<Button variant='contained' color='primary' onClick={toggleDrawerOpen}>Toggle drawer</Button>} />
+
+            <Route path="/cidades" element={<ListagemDeCidade />} />
+            {/* <Route path="/cidades/detalhe/:id" element={<Dashboard />} /> */}
+
             <Route path="*" element={<Navigate to="/pagina-inicial" />} />
         </Routes>
     );

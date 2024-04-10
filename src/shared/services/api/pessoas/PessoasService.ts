@@ -1,4 +1,4 @@
-import { Environment } from "../../../environment copy";
+import { Environment } from "../../../environment";
 import { Api } from "../axios-config";
 
 interface IListagemPessoa {

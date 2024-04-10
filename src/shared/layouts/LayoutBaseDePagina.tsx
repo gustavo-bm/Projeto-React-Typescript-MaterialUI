@@ -6,9 +6,9 @@ import { useDrawerContext } from '../contexts';
 
 
 interface ILayoutBaseDePaginaProps {
-    children: string;
     titulo: string;
     barraDeFerramentas?: ReactNode;
+    children?: ReactNode;
 }
 export const LayoutBaseDePagina: React.FC<ILayoutBaseDePaginaProps> = ({ children, titulo, barraDeFerramentas }) => {
     const smDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
